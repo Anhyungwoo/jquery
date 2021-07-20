@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		$(function(){
+		//ul 태그 하위의 HTML을 추출
+		 //const html=$('ul').html();
+		 //console.log(html);
+		 
+		 //ul 태그 하위에 HTML 대체
+		 //$('ul').html('<h1>대체된 HTML</h1>');
+		 $('ul').append('<li>메뉴6</li>');
+		 $('ul').prepend('<li>메뉴0</li>');
+		 $('#menu3').before('<li>메뉴3(앞)</li>');
+		 $('#menu3').after('<li>메뉴3(뒤)</li>');
+		 $('#menu3').remove();
+		 //$('ul').empty();
+		 //const clone=$('original').clone();
+		 //$('#copied').html(clone);
+		 const menu5 = $("#menu5");
+		 menu5.replaceWith($("menu3"));
+		 
+		 //wrap
+		 //$("#original").wrap("<div>");
+		 //$("ul").wrapAll("<div>");
+		 
+		});
+
+		</script>
+	</head>
+	<body>
+	 <ul id='orginal'>
+	  <li>메뉴1</li>
+	  <li id='menu2'>메뉴2</li>
+	  <li id='menu3'>메뉴3</li>
+	  <li>메뉴4</li>
+	  <li id='menu5'>메뉴5</li>
+	 </ul>
+	 
+	 <div id='copied'></div>
+	</body>
+</html> 
